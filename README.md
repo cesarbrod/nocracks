@@ -4,6 +4,11 @@ System-wide file integrity monitoring to detect unauthorized changes to
 critical system folders and files — especially those commonly documented as
 malware, ransomware, and persistence targets.
 
+> **Educational use only.** This project is for learning systems security and
+> defensive file-integrity monitoring. It is not a substitute for a professional
+> endpoint-detection-and-response (EDR) solution, and it must not be used to
+> monitor systems you do not own or have explicit authorization to administer.
+
 ## Why this exists
 
 Malware and ransomware routinely modify a small set of well-known locations
@@ -120,4 +125,4 @@ Report    : /var/lib/file_monitor/reports/report_20261115_090000.json
 
 ## License
 
-MIT
+GPL v3 or later. See `LICENSE` for the full text.
