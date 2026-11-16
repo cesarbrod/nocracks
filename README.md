@@ -129,4 +129,4 @@ See [`tutorial.md`](tutorial.md) for an in-depth explanation of why active file-
 
 ## License
 
-GPL v3 or later. See `LICENSE` for the full text.
+GPL v3 or later. See [LICENSE](LICENSE) for the full text.

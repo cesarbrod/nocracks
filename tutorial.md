@@ -230,4 +230,4 @@ sudo python3 file_monitor.py --check --excludes /var/log
 
 ## 6. License
 
-GPL v3 or later. See `LICENSE` for the full text.
+GPL v3 or later. See [LICENSE](LICENSE) for the full text.
