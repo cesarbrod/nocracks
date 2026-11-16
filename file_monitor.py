@@ -265,6 +265,10 @@ def create_snapshot(args: argparse.Namespace) -> int:
     }
     save_json(BASELINE_FILE, snapshot)
     print(f"[+] Snapshot saved to {BASELINE_FILE} ({len(entries)} files, {len(inaccessible)} inaccessible)")
+    if inaccessible:
+        print("[!] Inaccessible files (permission denied / missing):")
+        for path in sorted(inaccessible):
+            print(f"    - {path}")
     return 0
 
 
