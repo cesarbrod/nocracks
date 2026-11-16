@@ -123,6 +123,10 @@ Report    : /var/lib/file_monitor/reports/report_20261115_090000.json
 
 - Python 3.6+ (standard library only — no external dependencies)
 
+## Tutorial
+
+See [`tutorial.md`](tutorial.md) for an in-depth explanation of why active file-integrity monitoring matters, a line-by-line walkthrough of the code, and recommended actions for each type of report response.
+
 ## License
 
 GPL v3 or later. See `LICENSE` for the full text.
