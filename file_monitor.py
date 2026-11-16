@@ -86,8 +86,16 @@ DEFAULT_PATHS: List[str] = [
 DEFAULT_EXCLUDES: List[str] = [
     "/proc", "/sys", "/dev", "/run", "/tmp", "/var/tmp",
     "/var/lib/file_monitor",
-    os.path.expanduser("~/.bash_history"),
 ]
+
+# Filenames to skip in any directory (e.g. every user's shell history).
+EXCLUDED_BASENAMES: set = {
+    ".bash_history",
+    ".zsh_history",
+    ".sh_history",
+    ".lesshst",
+    ".python_history",
+}
 
 MAX_FILES_PER_SNAPSHOT = 50000   # safety cap so a single run stays bounded
 HASH_CHUNK_SIZE = 65536          # bytes read at a time when hashing
@@ -125,12 +133,14 @@ def utc_now() -> str:
 
 
 def is_excluded(path: str, excludes: List[str]) -> bool:
-    """Return True if *path* is under any excluded prefix."""
+    """Return True if *path* is under any excluded prefix or has an excluded basename."""
     norm = os.path.normpath(path)
     for exc in excludes:
         exc_norm = os.path.normpath(exc)
         if norm == exc_norm or norm.startswith(exc_norm + os.sep):
             return True
+    if os.path.basename(norm) in EXCLUDED_BASENAMES:
+        return True
     return False
 
 
