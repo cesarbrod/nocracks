@@ -1,5 +1,14 @@
 # Tutorial — nocracks File Integrity Monitor
 
+nocracks is written for **Debian-based Linux servers**. It assumes a POSIX
+filesystem layout (`/etc`, `/bin`, `/sbin`, `/usr/bin`, `/home`, `/root`,
+`/proc`, `/sys`, etc.), root-owned protected files, `os.stat` metadata
+semantics, and cron for scheduling.
+
+If you want to run nocracks on Windows Server, see [`windows.md`](windows.md)
+for what would need to be implemented. Nothing for Windows is included or
+planned here.
+
 ## 1. Why actively monitor your system
 
 Malware, ransomware, and intruders rarely announce themselves. Instead, they quietly alter a small set of well-known locations to:

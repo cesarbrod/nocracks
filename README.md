@@ -1,8 +1,11 @@
 # nocracks — File Integrity Monitor
 
-System-wide file integrity monitoring to detect unauthorized changes to
-critical system folders and files — especially those commonly documented as
-malware, ransomware, and persistence targets.
+System-wide file integrity monitoring for **Debian-based Linux servers**, to
+detect unauthorized changes to critical system folders and files — especially
+those commonly documented as malware, ransomware, and persistence targets.
+
+Want to run it on Windows Server? See [`windows.md`](windows.md) for what would
+need to be implemented (nothing is implemented here).
 
 > **Educational use only.** This project is for learning systems security and
 > defensive file-integrity monitoring. It is not a substitute for a professional
